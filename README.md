@@ -17,13 +17,13 @@ css:
   
 js:
   > 1、浏览器输入url之后发生了什么?  
-    https://www.jianshu.com/p/c1dfc6caa520
+  >> https://www.jianshu.com/p/c1dfc6caa520
   > 2、indexDB数据 . 
   
   > 3、resultfulApi . 
   
   > 4、js的设计模式 . 
-    https://juejin.im/entry/58c280b1da2f600d8725b887
+  >> https://juejin.im/entry/58c280b1da2f600d8725b887
     
   > 5、serviceWorker . 
   
