@@ -17,7 +17,8 @@
   
 #### js:
   > 1、浏览器输入url之后发生了什么?  
-  >> https://www.jianshu.com/p/c1dfc6caa520
+  >> https://www.jianshu.com/p/c1dfc6caa520 . 
+  
   > 2、indexDB数据 . 
   
   > 3、resultfulApi . 
