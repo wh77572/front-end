@@ -1,12 +1,12 @@
 # font-end
 整理的一些前端资料 . 
 
-html:
+#### html:
  > html5的新特性 . 
  
  > 行内元素，块级元素等等 . 
  
-css:
+#### css:
   > style: flex原理  
   
   > 垂直居中居中方式 . 
@@ -15,7 +15,7 @@ css:
   
   > transform的几种属性等等 . 
   
-js:
+#### js:
   > 1、浏览器输入url之后发生了什么?  
   >> https://www.jianshu.com/p/c1dfc6caa520
   > 2、indexDB数据 . 
@@ -61,7 +61,7 @@ js:
   
   > 22、事件捕获原理 . 
   
-库的使用:
+#### 库的使用:
   > react:  
   
   >> 1、redux原理  
