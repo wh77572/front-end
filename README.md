@@ -8,18 +8,25 @@
  
 #### css:
   > style: flex原理  
+  >> https://www.cnblogs.com/nuannuan7362/p/5823381.html
   
   > 垂直居中居中方式 . 
+  >> http://www.cnblogs.com/hutuzhu/p/4450850.html  
   
   > 盒模型等等 . 
+  >> https://www.cnblogs.com/chengzp/p/cssbox.html
   
   > transform的几种属性等等 . 
+  >> https://www.cnblogs.com/mumu-web/p/5706779.html  
   
   > css面试题及答案  
   >> https://segmentfault.com/a/1190000013325778  
   
   > bfc  
-  https://www.cnblogs.com/zczhangcui/p/6081574.html
+  https://www.cnblogs.com/zczhangcui/p/6081574.html  
+  
+  > 验证css传送门  
+  http://www.w3school.com.cn/tiy/t.asp?f=csse_selector_child
   
 #### js:
   > 1、浏览器输入url之后发生了什么?  
