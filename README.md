@@ -77,6 +77,8 @@
   
   > 23、对象的深拷贝浅拷贝  
   
+  > 24、js的几种常见问题  
+  >> https://www.haorooms.com/post/qd_ghfx  
   
 #### 库的使用:
   > react:  
