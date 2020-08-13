@@ -5,9 +5,95 @@
 
 
 #### html:
- > html5的新特性 . 
+ 1. `<!DOCTYPE>`
  
- > 行内元素，块级元素等等 . 
+ > `<!DOCTYPE>` 声明位于文档中的最前面的位置，处于 <html> 标签之前。
+
+ > `<!DOCTYPE>` 声明不是一个 HTML 标签；它是用来告知 Web 浏览器页面使用了哪种 HTML 版本。
+
+ > 在 HTML 4.01 中，`<!DOCTYPE>` 声明需引用 DTD （文档类型声明），因为 HTML 4.01 是基于 SGML （Standard Generalized Markup Language 标准通用标记语言）。DTD 指定了标记语言的规则，
+ > 确保了浏览器能够正确的渲染内容。
+ > HTML5 不是基于 SGML，因此不要求引用 DTD。
+ 
+ > HTML 4.01 与 HTML5之间的差异
+ 
+ > HTML 4.01 规定了三种不同的 `<!DOCTYPE>` 声明，分别是：Strict、Transitional 和 Frameset。 HTML5 中仅规定了一种：`<!DOCTYPE html>`
+ 
+ 2. meta标签
+ 
+ > 提供给页面的一些元信息（名称/值对），有助于SEO。
+ 
+ > 属性值
+ >> name：名称/值对中的名称。author、description、keywords、generator、revised、others。 把 content 属性关联到一个名称。
+ 
+ >> http-equiv：没有name时，会采用这个属性的值。content-type、expires、refresh、set-cookie。把content属性关联到http头部
+ 
+ >> content：名称/值对中的值， 可以是任何有效的字符串。 始终要和 name 属性或 http-equiv 属性一起使用
+ 
+ >> scheme： 用于指定要用来翻译属性值的方案
+ 
+ 3. HTML语义化
+ 
+ > 用正确的标签做正确的事情。
+ 
+ > html语义化让页面的内容结构化，结构更清晰，便于对浏览器，搜索引擎解析；
+ 
+ > 即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的；
+ 
+ > 搜索引擎的爬虫也依赖于HTML标记确定上下文和各个关键字的权重，利于SEO;
+ 
+ > 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+ 
+ 4. 常见的浏览器内核
+ 
+ > Trident内核：IE,MaxThon,TT,The Word,360,搜狗浏览器等。
+ 
+ > Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等；
+ 
+ > Presto内核：Opera7及以上。[现为：Blink]
+ 
+ > Webkit内核：Safari,Chrome等。[Chrome的:Blink(Webkit的分支)]
+ 
+ 5. 简单介绍对浏览器内核的理解
+ 
+ > 主要分成两部分：渲染引擎和JS引擎。
+
+ > 渲染引擎：将代码转换成页面。负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等）、以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有
+ > 不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其他需要编辑、显示网络内容的应用程序都需要内核。
+ > JS引擎：解析和执行javascript来实现网页的动态效果。
+
+ > 最开始渲染引擎和JS引擎并没有区分得很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。
+ 
+ 6. HTML5有哪些新特性，移除了哪些元素？如何处理HTML5新标签的浏览器兼容问题？
+ 
+ > 新特性：
+
+ >> 用于绘画的canvas元素；
+ 
+ >> 用于媒介回放的video和audio元素；
+ 
+ >> 对本地离线存储有更好的支持，localStorage长期存储数据，浏览器关闭后数据不丢失；sessionStorage的数据在浏览器关闭后自动删除；
+ 
+ >> 语意化更好的内容元素，比如header,nav,section,article,footer；
+ 
+ >> 新的表单控件：calendar,date,time,email,url,search；
+ 
+ >> 新的技术webworker,websockt、Geolocation；
+
+ > 移除元素：
+
+ >> 纯表现的元素：basefont,big,center,font,s,strike,tt,u;
+ >> 对可用性产生负面影响的元素：frame,frameset,noframes;
+
+ > 处理兼容性问题：
+
+ >> IE8/IE7/IE6支持document.createElement方法产生的标签，可以利用这一特性让这些浏览器支持HTML5新标签，浏览器支持新标签后，还需要添加标签默认的样式。
+ 
+ 7. html5哪些标签可以做SEO优化？
+ 
+ > title、meta、header、footer、nav、article、aside
+ 
+ 
  
 #### css:
   > style: flex原理  
