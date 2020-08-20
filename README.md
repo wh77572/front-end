@@ -22,17 +22,17 @@
 
 2. meta标签
 
-> 提供给页面的一些元信息（名称/值对），有助于SEO。
+提供给页面的一些元信息（名称/值对），有助于SEO。
 
-> 属性值
+属性值
 
->> name：名称/值对中的名称。author、description、keywords、generator、revised、others。 把 content 属性关联到一个名称。
+> name：名称/值对中的名称。author、description、keywords、generator、revised、others。 把 content 属性关联到一个名称。
 
->> http-equiv：没有name时，会采用这个属性的值。content-type、expires、refresh、set-cookie。把content属性关联到http头部
+> http-equiv：没有name时，会采用这个属性的值。content-type、expires、refresh、set-cookie。把content属性关联到http头部
 
->> content：名称/值对中的值， 可以是任何有效的字符串。 始终要和 name 属性或 http-equiv 属性一起使用
+> content：名称/值对中的值， 可以是任何有效的字符串。 始终要和 name 属性或 http-equiv 属性一起使用
 
->> scheme： 用于指定要用来翻译属性值的方案
+> scheme： 用于指定要用来翻译属性值的方案
 
 3. HTML语义化
 
@@ -68,33 +68,33 @@
 
 > ACCESSKEY属性功能：表示访问label标签所绑定的元素的热键，当您按下热键，所绑定的元素将获取焦点。例如，
 
->`<label for="labelKey" accesskey="c">label</label>  <input id="labelKey" />`
+> `<label for="labelKey" accesskey="c">label</label>  <input id="labelKey" />`
 
 6. HTML5有哪些新特性，移除了哪些元素？如何处理HTML5新标签的浏览器兼容问题？
 
-> 新特性：
+新特性：
 
->> 用于绘画的canvas元素；
+> 用于绘画的canvas元素；
 
->> 用于媒介回放的video和audio元素；
+> 用于媒介回放的video和audio元素；
 
->> 对本地离线存储有更好的支持，localStorage长期存储数据，浏览器关闭后数据不丢失；sessionStorage的数据在浏览器关闭后自动删除；
+> 对本地离线存储有更好的支持，localStorage长期存储数据，浏览器关闭后数据不丢失；sessionStorage的数据在浏览器关闭后自动删除；
 
->> 语意化更好的内容元素，比如header,nav,section,article,footer；
+> 语意化更好的内容元素，比如header,nav,section,article,footer；
 
->> 新的表单控件：calendar,date,time,email,url,search；
+> 新的表单控件：calendar,date,time,email,url,search；
 
->> 新的技术webworker,websockt、Geolocation；
+> 新的技术webworker,websockt、Geolocation；
 
-> 移除元素：
+移除元素：
 
->> 纯表现的元素：basefont,big,center,font,s,strike,tt,u;
+> 纯表现的元素：basefont,big,center,font,s,strike,tt,u;
 
->> 对可用性产生负面影响的元素：frame,frameset,noframes;
+> 对可用性产生负面影响的元素：frame,frameset,noframes;
 
-> 处理兼容性问题：
+处理兼容性问题：
 
->> IE8/IE7/IE6支持document.createElement方法产生的标签，可以利用这一特性让这些浏览器支持HTML5新标签，浏览器支持新标签后，还需要添加标签默认的样式。
+> IE8/IE7/IE6支持document.createElement方法产生的标签，可以利用这一特性让这些浏览器支持HTML5新标签，浏览器支持新标签后，还需要添加标签默认的样式。
 
 7. html5哪些标签可以做SEO优化？
 
