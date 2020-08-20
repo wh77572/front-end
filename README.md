@@ -306,22 +306,41 @@ js/app.js
 
 > 避免在页面的主体布局中使用table，table要等其中的内容完全下载之后才会显示出来，显示比div+css布局慢。
 
+21. 如何进行网站性能优化
+
+> 减少HTTP请求：合并文件、CSS精灵、inline Image
+
+> 将样式表放到页面顶部
+
+> 不使用CSS表达式
+
+> 使用<link>不使用@import
+
+> 将脚本放到页面底部
+
+> 将javascript和css从外部引入
+
+> 压缩javascript和css
+
 #### css:
  1. flex原理  
- >> https://www.cnblogs.com/nuannuan7362/p/5823381.html
+ > Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型。
+ 
+ > 我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 CSS Grid Layout，可以同时处理行和列上的布局。
+ > https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
  2. 垂直居中居中方式
- >> http://www.cnblogs.com/hutuzhu/p/4450850.html 
+ > http://www.cnblogs.com/hutuzhu/p/4450850.html 
  
 
- > 盒模型等等 . 
- >> https://www.cnblogs.com/chengzp/p/cssbox.html
+ 盒模型等等 . 
+ > https://www.cnblogs.com/chengzp/p/cssbox.html
 
- > transform的几种属性等等 . 
- >> https://www.cnblogs.com/mumu-web/p/5706779.html  
+ transform的几种属性等等 . 
+ > https://www.cnblogs.com/mumu-web/p/5706779.html  
 
  > css面试题及答案  
- >> https://segmentfault.com/a/1190000013325778  
+ > https://segmentfault.com/a/1190000013325778  
 
 12. 清除浮动的几种方式，及原理？
 
