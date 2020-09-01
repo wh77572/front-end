@@ -150,13 +150,13 @@ link和@import：
 
 >在标准的盒子模型中，width指content部分的宽度
 
->box-sizing的使用
+box-sizing的使用
 
->>box-sizing: content-box 是W3C盒子模型
+>box-sizing: content-box 是W3C盒子模型
 
->>box-sizing: border-box 是IE盒子模型
+>box-sizing: border-box 是IE盒子模型
 
->>box-sizing的默认属性是content-box
+>box-sizing的默认属性是content-box
 
 12. 简单介绍对浏览器内核的理解
 
@@ -322,146 +322,434 @@ js/app.js
 
 > 压缩javascript和css
 
+22. 行内元素有哪些？块级元素有哪些？空(void)元素有那些？行内元素和块级元素有什么区别？
+
+> 行内元素有：a b span img input select strong
+
+> 块级元素有：div ul ol li dl dt dd h1 h2 h3 h4… p
+
+> 空元素：<br> <hr> <img> <input> <link> <meta>
+
+> 行内元素不可以设置宽高，不独占一行
+
+> 块级元素可以设置宽高，独占一行
+
 #### css:
- 1. flex原理  
- > Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型。
- 
- > 我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 CSS Grid Layout，可以同时处理行和列上的布局。
- > https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+1. 盒子模型
 
- 2. 垂直居中居中方式
- > http://www.cnblogs.com/hutuzhu/p/4450850.html 
- 
+> 盒模型分为两类: IE盒模型和标准盒模型。 两者的区别在于:
 
- 盒模型等等 . 
- > https://www.cnblogs.com/chengzp/p/cssbox.html
+> IE盒模型的width/height = content + border + padding
 
- transform的几种属性等等 . 
- > https://www.cnblogs.com/mumu-web/p/5706779.html  
+> 标准盒模型的width/height = content
 
- > css面试题及答案  
- > https://segmentfault.com/a/1190000013325778  
+> https://www.cnblogs.com/chengzp/p/cssbox.html
 
-12. 清除浮动的几种方式，及原理？
+2. flex原理  
 
-> 清除浮动简单，但这题要引出的是BFC，BFC也是必考的基础知识点
+> Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型。
 
->> ::after / <br> / clear: both
+> 我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 CSS Grid Layout，可以同时处理行和列上的布局。
 
->> 创建父级 BFC(overflow:hidden)
+> https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
->> 父级设置高度
+3. 垂直居中居中方式
 
->> BFC （块级格式化上下文），是一个独立的渲染区域，让处于 BFC 内部的元素与外部的元素相互隔离，使内外元素的定位不会相互影响。
+> 区分行内元素以及块级元素
 
-> 触发条件:
->> 根元素
+> http://www.cnblogs.com/hutuzhu/p/4450850.html 
 
->> position: absolute/fixed
+4. CSS优先级算法如何计算？
 
->> display: inline-block / table
+> 优先级就近原则，同权重情况下样式定义最近者为准
 
->> float 元素
+> 载入样式以最后载入的定位为准
 
->> ovevflow !== visible
+> 优先级为: !important > id > class > tag; !important比 内联优先级高
+
+5. CSS3有哪些新特性
+
+> 新增各种css选择器
+
+> 圆角 border-radius
+
+> 多列布局
+
+> 阴影和反射
+
+> 文字特效text-shadow
+
+> 线性渐变
+
+> 旋转transform
+
+CSS3新增伪类有那些？
+
+> :after在元素之前添加内容,也可以用来做清除浮动。
+
+> :before在元素之后添加内容。
+
+> :enabled已启用的表单元素。
+
+> :disabled已禁用的表单元素。
+
+> :checked单选框或复选框被选中。
+
+6. CSS常用选择器, 哪些属性可以继承？
+
+CSS选择符：
+
+> id选择器(#myid)
+
+> 类选择器(.myclassname)
+
+> 标签选择器(div, h1, p)
+
+> 相邻选择器(h1 + p)
+
+> 子选择器（ul > li）
+
+> 后代选择器（li a）
+
+> 通配符选择器（*）
+
+> 属性选择器（`a[rel="external"]`）
+
+> 伪类选择器（`a:hover, li:nth-child`）
+
+> 可继承的属性：font-size, font-family, color
+
+> 不可继承的样式：border, padding, margin, width, height
+
+7. 如何创建块级格式化上下文(block formatting context),BFC有什么用
+
+> 什么是BFC?
+
+> BFC格式化上下文，它是一个独立的渲染区域，让处于 BFC内部的元素和外部的元素相互隔离，使内外元素的定位不会相互影响
+
+> 如何产生BFC?
+
+> display: inline-block
+
+> position: absolute/fixed
+
+> BFC作用
+
+> BFC最大的一个作用就是：在页面上有一个独立隔离容器，容器内的元素和容器外的元素布局不会相互影响
+
+> 解决上外边距重叠;重叠的两个box都开启bfc;
+
+> 解决浮动引起高度塌陷;容器盒子开启bfc
+
+> 解决文字环绕图片;左边图片div,右边文字容器p,将p容器开启bfc
+
+
+> BFC （块级格式化上下文），是一个独立的渲染区域，让处于 BFC 内部的元素与外部的元素相互隔离，使内外元素的定位不会相互影响。
+
+触发条件:
+
+> 根元素
+
+> position: absolute/fixed
+
+> display: inline-block / table
+
+> float 元素
+
+> ovevflow !== visible
 
 规则:
->> 属于同一个 BFC 的两个相邻 Box 垂直排列
 
->> 属于同一个 BFC 的两个相邻 Box 的 margin 会发生重叠
+> 属于同一个 BFC 的两个相邻 Box 垂直排列
 
->> BFC 的区域不会与 float 的元素区域重叠
+> 属于同一个 BFC 的两个相邻 Box 的 margin 会发生重叠
 
->> 计算 BFC 的高度时，浮动子元素也参与计算
+> BFC 的区域不会与 float 的元素区域重叠
 
->> 文字层不会被浮动层覆盖，环绕于周围
- > bfc  
- https://www.cnblogs.com/zczhangcui/p/6081574.html  
+> 计算 BFC 的高度时，浮动子元素也参与计算
 
- > 验证css传送门  
- http://www.w3school.com.cn/tiy/t.asp?f=csse_selector_child
+> 文字层不会被浮动层覆盖，环绕于周围
+
+bfc  
+
+> https://www.cnblogs.com/zczhangcui/p/6081574.html  
+
+> http://chenhaizhou.github.io/2015/01/14/bfc.html
+
+8. 绝对定位和相对定位的区别
+
+9. display:inline-block什么时候不会显示间隙？
+
+> 间隙是由空白符（white space）造成的, 可能使用了空格、换行、tab、换页等
+
+> 移除空格
+
+> 使用margin负值
+
+> 使用font-size:0
+
+> letter-spacing
+
+> word-spacing
+
+> https://github.com/XXHolic/blog/issues/13
+
+10. 清除浮动的几种方式，各自的优缺点
+
+> 父级div定义height
+
+> 结尾处加空div标签clear:both
+
+> 父级div定义伪类:after和zoom
+
+> 父级div定义overflow:hidden
+
+> 父级div也浮动，需要定义宽度
+
+> 结尾处加br标签clear:both
+
+> 比较好的是第3种方式，好多网站都这么用
+
+11. CSS3中translate、transform和translation的区别和联系
+
+translate:移动，是transform的一个方法。
+
+> 通过 translate() 方法，元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数：
+
+> `transform: translate(50px, 100px);`
+
+> `-ms-transform: translate(50px,100px);`
+
+> `-webkit-transform: translate(50px,100px);`
+
+> `-o-transform: translate(50px,100px);`
+
+> `-moz-transform: translate(50px,100px);`
+
+transform:变形。改变
+
+> CSS3中主要包括 旋转：rotate() 顺时针旋转给定的角度，允许负值 rotate(30deg)
+
+> 扭曲：skew() 元素翻转给定的角度,根据给定的水平线（X 轴）和垂直线（Y 轴）参数：skew(30deg,20deg)
+
+> 缩放：scale() 放大或缩小，根据给定的宽度（X 轴）和高度（Y 轴）参数： scale(2,4)
+
+> 移动：translate() 平移，传进 x,y值，代表沿x轴和y轴平移的距离
+
+transition: 允许CSS属性值在一定的时间区间内平滑的过渡
+
+> 需要事件的触发，例如单击、获取焦点、失去焦点等.
+
+> 例如：transition:width 2s ease 0s;
+
+> `transition:property duration timing-function delay;`
+
+> property:CSS的属性，例如：width height 为none时停止所有的运动，可以为transform
+
+> duration:持续时间
+
+> timing-function:ease等
+
+> delay:延迟
+
+CSS3动画（简单动画的实现，如旋转等）
+
+> 依靠CSS3中提出的三个属性：transition、transform、animation
+
+> transition：定义了元素在变化过程中是怎么样的，包含transition-property、transition-duration、transition-timing-function、transition-delay。
+
+> transform：定义元素的变化结果，包含rotate、scale、skew、translate。
+
+> animation：动画定义了动作的每一帧（@keyframes）有什么效果，包括animation-name，animation-duration、animation-timing-function、animation-delay、animation-iteration-count、> animation-direction
+
+> https://www.jianshu.com/p/1376b76a3b90
+
+12. 为什么要初始化CSS样式?
+
+> 因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。
+
+> 当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化
+
+13. position有哪些值？有什么作用？
+
+> static。默认值，不脱离文档流，top，right，bottom，left等属性不生效。
+
+> relative。不脱离文档流，依据自身位置进行偏离，当子元素设置absolute，将依据它进行偏离。
+
+> absolute。脱离文档流，依据top，right，bottom，left等属性在正常文档流中偏移位置。
+
+> fixed。通过浏览器窗口进行定位，出现滚动条的时候，不会随之滚动。
+
+13. Flex布局
+
+> display: flex  //设置Flex模式
+
+> flex-direction: column  //决定元素是横排还是竖着排
+
+> flex-wrap: wrap     //决定元素换行格式
+
+> justify-content: space-between  //同一排下对齐方式，空格如何隔开各个元素
+
+> align-items: center     //同一排下元素如何对齐
+
+> align-content: space-between    //多行对齐方式
+
+flex:1;详解:
+
+> https://www.jianshu.com/p/57a94430dcbe
+
+14. CSS优先级算法如何计算？
+
+选择器的优先级
+
+> ID选择器>class选择器>标签选择器
+
+> css权重计算方法(有时套用的选择器过于繁琐，并不知道优先级的高低)
+
+> 内联样式，如: style=””，权值为1000。
+
+> ID选择器，如：#content，权值为100。
+
+> 类，伪类和属性选择器，如.content，权值为10。
+
+> 标签选择器和伪元素选择器，如div p，权值为1。    
+
+复合选择器的权重计算：
+ 
+> 将基本选择器的权重相加之和，就是权重大小，值越大，权重越高
+
+example：
+
+> div  li a ：1+1+1=3 
+
+> .box  li  a : 10+1+1=12 
+
+> #box  li   a : 100+1+1=102
+
+实例：
+
+> #box ul li a.cur  {color:red;}  权重是  100+1+1+1+10 = 113
+
+> #box li .cur {color:green;}  权重是  100+1+10  = 111   
+
+> 那么后面的样式就会被前面的样式层叠掉,那么最终a的颜色是red
+
+15. CSS3新增伪类有那些?
+
+> p:first-of-type 选择属于其父元素的首个元素
+
+> p:last-of-type 选择属于其父元素的最后元素
+
+> p:only-of-type 选择属于其父元素唯一的元素
+
+> p:only-child 选择属于其父元素的唯一子元素
+
+> p:nth-child(2) 选择属于其父元素的第二个子元素
+
+> :enabled :disabled 表单控件的禁用状态。
+
+> :checked 单选框或复选框被选中。
+
+16、stylus/sass/less区别
+
+均具有“变量”、“混合”、“嵌套”、“继承”、“颜色混合”五大基本特性
+
+> Scss和LESS语法较为严谨，LESS要求一定要使用大括号“{}”，Scss和Stylus可以通过缩进表示层次与嵌套关系
+
+> Scss无全局变量的概念，LESS和Stylus有类似于其它语言的作用域概念
+
+> Sass是基于Ruby语言的，而LESS和Stylus可以基于NodeJS NPM下载相应库后进行编译；
+
+17. 知道css有个content属性吗？有什么作用？有什么应用？
+
+> css的content属性专门应用在 before/after伪元素上，用于来插入生成内容。最常见的应用是利用伪类清除浮动。
+
+18. 
+
+> 验证css传送门  
+http://www.w3school.com.cn/tiy/t.asp?f=csse_selector_child
 
 #### js:
- > 1、浏览器输入url之后发生了什么?  
- >> https://www.jianshu.com/p/c1dfc6caa520 . 
+> 1、浏览器输入url之后发生了什么?  
+>> https://www.jianshu.com/p/c1dfc6caa520 . 
 
- > 2、indexDB数据 . 
+> 2、indexDB数据 . 
 
- > 3、resultfulApi . 
+> 3、resultfulApi . 
 
- > 4、js的设计模式 . 
- >> https://juejin.im/entry/58c280b1da2f600d8725b887
+> 4、js的设计模式 . 
+>> https://juejin.im/entry/58c280b1da2f600d8725b887
 
- > 5、serviceWorker . 
+> 5、serviceWorker . 
 
- > 6、svg . 
+> 6、svg . 
 
- > 7、js的单元测试 . 
+> 7、js的单元测试 . 
 
- > 8、js的算法： 去重、排序等等 . 
+> 8、js的算法： 去重、排序等等 . 
 
- > 9、新版css  
+> 9、新版css  
 
- > 10、dart语言 . 
+> 10、dart语言 . 
 
- > 11、seo优化 . 
+> 11、seo优化 . 
 
- > 12、es6的set、get、迭代器 . 
+> 12、es6的set、get、迭代器 . 
 
- > 13、http的属性以及https的区别 . 
+> 13、http的属性以及https的区别 . 
 
- > 14、js继承的几种方式
+> 14、js继承的几种方式
 
- > 15、双向数据绑定的原理（es6）
+> 15、双向数据绑定的原理（es6）
 
- > 16、prototype（原型定义）
+> 16、prototype（原型定义）
 
- > 17、浏览器怎么渲染页面 . 
+> 17、浏览器怎么渲染页面 . 
 
- > 18、ajax。request . 
+> 18、ajax。request . 
 
- > 19、hybrid
+> 19、hybrid
 
- > 20、递归
+> 20、递归
 
- > 21、箭头函数原理（this指向问题）  
+> 21、箭头函数原理（this指向问题）  
 
- > 22、事件捕获原理 . 
+> 22、事件捕获原理 . 
 
- > 23、对象的深拷贝浅拷贝  
+> 23、对象的深拷贝浅拷贝  
 
- 24.js的几种常见问题  
- >> https://www.haorooms.com/post/qd_ghfx  
- 
- 25. 如何中断ajax请求？
+24.js的几种常见问题  
+>> https://www.haorooms.com/post/qd_ghfx  
 
- > 一种是设置超时时间让ajax自动断开，另一种是手动停止ajax请求，其核心是调用XML对象的abort方法，ajax.abort()
+25. 如何中断ajax请求？
+
+> 一种是设置超时时间让ajax自动断开，另一种是手动停止ajax请求，其核心是调用XML对象的abort方法，ajax.abort()
 
 
 
 #### 库的使用:
- > react:  
+> react:  
 
- >> 1、redux原理  
+>> 1、redux原理  
 
- >> 2、中间键  
+>> 2、中间键  
 
- >> 3、高阶组件  
+>> 3、高阶组件  
 
- > > 4、生命周期  
+> > 4、生命周期  
 
- >vue:  
+>vue:  
 
- >> 1、vuex . 
+>> 1、vuex . 
 
- > > 2、广播 . 
+> > 2、广播 . 
 
- > > 3、mixin . 
+> > 3、mixin . 
 
- > > 4、生命周期 . 
+> > 4、生命周期 . 
 
- >关于react引入antd没有样式问题.
- 在modules下面找到babel-loder，然后在options下面加上
- plugins: [
-               ['import', { libraryName: 'antd', style: 'css' }],
-             ],
+>关于react引入antd没有样式问题.
+在modules下面找到babel-loder，然后在options下面加上
+plugins: [
+              ['import', { libraryName: 'antd', style: 'css' }],
+            ],
