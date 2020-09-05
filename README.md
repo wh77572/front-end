@@ -478,6 +478,15 @@ bfc
 
 8. 绝对定位和相对定位的区别
 
+position: absolute
+
+> 绝对定位：绝对定位是相对于元素最近的已定位的祖先元素（即是设置了绝对定位或者相对定位的祖先元素）。如果元素没有已定位的祖先元素，那么它的位置则是相对于最初的包含块（body）。
+
+position: relative
+
+> 相对定位：相对定位是相对于元素在文档中的初始位置
+
+
 9. display:inline-block什么时候不会显示间隙？
 
 > 间隙是由空白符（white space）造成的, 可能使用了空格、换行、tab、换页等
@@ -664,7 +673,15 @@ example：
 
 > css的content属性专门应用在 before/after伪元素上，用于来插入生成内容。最常见的应用是利用伪类清除浮动。
 
-18. 
+18. CSS在性能优化方面的实践
+
+>css压缩与合并、Gzip压缩
+
+>css文件放在head里、不要用@import
+
+>尽量用缩写、避免用滤镜、合理使用选择器
+
+
 
 > 验证css传送门  
 http://www.w3school.com.cn/tiy/t.asp?f=csse_selector_child
