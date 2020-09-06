@@ -334,6 +334,62 @@ js/app.js
 
 > 块级元素可以设置宽高，独占一行
 
+23. 简单介绍BFC和IFC
+BFC —— 块级格式化上下文
+
+BFC触发条件：
+
+> 根元素或其他包含他的元素
+
+> 浮动元素  float：left/right
+
+> position：absolute/fixed
+
+> display：inline-block,table-cell,table-caption
+
+> overflow不为visible
+
+> 弹性盒子：display: flex 或 inline-flex
+
+BFC特性
+
+> 内部的Box会在垂直方向上一个接一个的放置；
+
+> 垂直方向的距离有margin决定(属于同一个BFC的两个相邻Box的margin会发生重叠，与方向无关)；
+
+> 每个元素的margin box的左边， 与包含块border； box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此；
+
+> BFC的区域不会与float的元素区域重叠；
+
+> 计算BFC的高度时，浮动子元素也参与计算，可以解决父元素高度塌陷问题；
+
+> BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面元素，反之亦然；
+
+> 文档流中的BFC元素, width为auto时，会占满当前行的剩余宽度。
+
+应用
+
+> 阻止两个相邻的普通流中的块元素垂直方向上的margin折叠；
+
+> BFC可以包含浮动元素，撑开父元素；
+
+> BFC可以阻止元素被浮动元素覆盖。
+
+BFC与hasLayout
+
+> IE6-7不支持BFC，而是使用私有属性hasLayout，要用zoom：1触发hasLayout属性。Zoom用于设置或检索元素的缩放比例，值为“1”即使用元素的实际尺寸。
+
+IFC —— 行内格式化上下文
+创建方式：
+
+> 和BFC相比，它的创建方式是被动的、隐式的，是由所包含的子元素来创建：只有在一个区域内仅包含可水平排列的元素时才会生成，这些子元素可以是文本、inline-level元素或inline-block-level元素。
+
+特性：
+
+> IFC内部的元素，按从左到右、从上到下的顺序排布；
+> IFC内部的每个元素，都可以通过设置vertical-align属性，来调整在垂直方向上的对齐；
+> 包含这些内部元素的矩形区域，形成的每一行，被称为line box（行框）。
+
 #### css:
 1. 盒子模型
 
