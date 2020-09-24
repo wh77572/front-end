@@ -1,5 +1,5 @@
 #### css:
-1. 盒子模型
+1.盒子模型
 
 > 盒模型分为两类: IE盒模型和标准盒模型。 两者的区别在于:
 
@@ -9,21 +9,37 @@
 
 > https://www.cnblogs.com/chengzp/p/cssbox.html
 
-2. flex原理  
+2.flex原理  
 
 > Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型。
 
 > 我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 CSS Grid Layout，可以同时处理行和列上的布局。
 
+> display: flex  //设置Flex模式
+
+> flex-direction: column  //决定元素是横排还是竖着排
+
+> flex-wrap: wrap     //决定元素换行格式
+
+> justify-content: space-between  //同一排下对齐方式，空格如何隔开各个元素
+
+> align-items: center     //同一排下元素如何对齐
+
+> align-content: space-between    //多行对齐方式
+
+flex:1;详解:
+
+> https://www.jianshu.com/p/57a94430dcbe
+
 > https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
-3. 垂直居中居中方式
+3.垂直居中居中方式
 
 > 区分行内元素以及块级元素
 
 > http://www.cnblogs.com/hutuzhu/p/4450850.html 
 
-4. CSS优先级算法如何计算？
+4.CSS优先级算法如何计算？
 
 > 优先级就近原则，同权重情况下样式定义最近者为准
 
@@ -31,7 +47,7 @@
 
 > 优先级为: !important > id > class > tag; !important比 内联优先级高
 
-5. CSS3有哪些新特性
+5.CSS3有哪些新特性
 
 > 新增各种css选择器
 
@@ -59,7 +75,7 @@ CSS3新增伪类有那些？
 
 > :checked单选框或复选框被选中。
 
-6. CSS常用选择器, 哪些属性可以继承？
+6.CSS常用选择器, 哪些属性可以继承？
 
 CSS选择符：
 
@@ -85,7 +101,7 @@ CSS选择符：
 
 > 不可继承的样式：border, padding, margin, width, height
 
-7. 如何创建块级格式化上下文(block formatting context),BFC有什么用
+7.如何创建块级格式化上下文(block formatting context),BFC有什么用
 
 > 什么是BFC?
 
@@ -106,7 +122,6 @@ CSS选择符：
 > 解决浮动引起高度塌陷;容器盒子开启bfc
 
 > 解决文字环绕图片;左边图片div,右边文字容器p,将p容器开启bfc
-
 
 > BFC （块级格式化上下文），是一个独立的渲染区域，让处于 BFC 内部的元素与外部的元素相互隔离，使内外元素的定位不会相互影响。
 
@@ -140,7 +155,7 @@ bfc
 
 > http://chenhaizhou.github.io/2015/01/14/bfc.html
 
-8. 绝对定位和相对定位的区别
+8.绝对定位和相对定位的区别
 
 position: absolute
 
@@ -150,8 +165,7 @@ position: relative
 
 > 相对定位：相对定位是相对于元素在文档中的初始位置
 
-
-9. display:inline-block什么时候不会显示间隙？
+9.display:inline-block什么时候不会显示间隙？
 
 > 间隙是由空白符（white space）造成的, 可能使用了空格、换行、tab、换页等
 
@@ -167,7 +181,7 @@ position: relative
 
 > https://github.com/XXHolic/blog/issues/13
 
-10. 清除浮动的几种方式，各自的优缺点
+10.清除浮动的几种方式，各自的优缺点
 
 > 父级div定义height
 
@@ -183,7 +197,7 @@ position: relative
 
 > 比较好的是第3种方式，好多网站都这么用
 
-11. CSS3中translate、transform和translation的区别和联系
+11.CSS3中translate、transform和translation的区别和联系
 
 translate:移动，是transform的一个方法。
 
@@ -237,13 +251,13 @@ CSS3动画（简单动画的实现，如旋转等）
 
 > https://www.jianshu.com/p/1376b76a3b90
 
-12. 为什么要初始化CSS样式?
+12.为什么要初始化CSS样式?
 
 > 因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。
 
 > 当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化
 
-13. position有哪些值？有什么作用？
+13.position有哪些值？有什么作用？
 
 > static。默认值，不脱离文档流，top，right，bottom，left等属性不生效。
 
@@ -253,25 +267,13 @@ CSS3动画（简单动画的实现，如旋转等）
 
 > fixed。通过浏览器窗口进行定位，出现滚动条的时候，不会随之滚动。
 
-13. Flex布局
+13.浏览器中的回流和重绘是什么，分别在什么情况下触发
 
-> display: flex  //设置Flex模式
+> segmentfault:  https://segmentfault.com/a/1190000017329980
 
-> flex-direction: column  //决定元素是横排还是竖着排
+> 掘金:  https://juejin.im/post/6844904119157669902
 
-> flex-wrap: wrap     //决定元素换行格式
-
-> justify-content: space-between  //同一排下对齐方式，空格如何隔开各个元素
-
-> align-items: center     //同一排下元素如何对齐
-
-> align-content: space-between    //多行对齐方式
-
-flex:1;详解:
-
-> https://www.jianshu.com/p/57a94430dcbe
-
-14. CSS优先级算法如何计算？
+14.CSS优先级算法如何计算？
 
 选择器的优先级
 
@@ -293,21 +295,21 @@ flex:1;详解:
 
 example：
 
-> div  li a ：1+1+1=3 
+> `div  li a ：1+1+1=3`
 
-> .box  li  a : 10+1+1=12 
+> `.box  li  a : 10+1+1=12 `
 
-> #box  li   a : 100+1+1=102
+> `#box  li   a : 100+1+1=102`
 
 实例：
 
-> #box ul li a.cur  {color:red;}  权重是  100+1+1+1+10 = 113
+> `#box ul li a.cur  {color:red;}  权重是  100+1+1+1+10 = 113`
 
-> #box li .cur {color:green;}  权重是  100+1+10  = 111   
+> `#box li .cur {color:green;}  权重是  100+1+10  = 111 `  
 
 > 那么后面的样式就会被前面的样式层叠掉,那么最终a的颜色是red
 
-15. CSS3新增伪类有那些?
+15.CSS3新增伪类有那些?
 
 > p:first-of-type 选择属于其父元素的首个元素
 
@@ -323,7 +325,7 @@ example：
 
 > :checked 单选框或复选框被选中。
 
-16、常用的 CSS 预处理器是什么？有什么特点？（先谈stylus/sass/less区别）
+16.常用的 CSS 预处理器是什么？有什么特点？（先谈stylus/sass/less区别）
 
 均具有“变量”、“混合”、“嵌套”、“继承”、“颜色混合”五大基本特性
 
@@ -333,11 +335,14 @@ example：
 
 > Sass是基于Ruby语言的，而LESS和Stylus可以基于NodeJS NPM下载相应库后进行编译；
 
-17. 知道css有个content属性吗？有什么作用？有什么应用？
+详解：
+> https://juejin.im/post/6844903808049348616
+
+17.知道css有个content属性吗？有什么作用？有什么应用？
 
 > css的content属性专门应用在 before/after伪元素上，用于来插入生成内容。最常见的应用是利用伪类清除浮动。
 
-18. CSS在性能优化方面的实践
+18.CSS在性能优化方面的实践
 
 >css压缩与合并、Gzip压缩
 
@@ -351,11 +356,21 @@ example：
 > 而在 CSS 解析完毕后，需要将解析的结果与 DOM Tree 的内容一起进行分析建立一棵 Render Tree，最终用来进行绘图。在建立 Render Tree 时（WebKit 中的「Attachment」过程），浏览器就要为每个
 > DOM Tree 中的元素根据 CSS 的解析结果（Style Rules）来确定生成怎样的 Render Tree。
 
-20. px，em，rem的区别是什么，应用场景有哪些？
+20.px，em，rem的区别是什么，应用场景有哪些？
 
-21. 手机端有哪些适配方案？
+> px像素。绝对单位，像素px是相对于显示器屏幕分辨率而言的，是一个虚拟单位。是计算机系统的数字化图像长度单位，如果px要换算成物理长度，需要指定精度DPI。
 
-22. ::before 和 :after中双冒号和单冒号有什么区别？
+> em是相对长度单位，相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对浏览器的默认字体尺寸。它会继承父级元素的字体大小，因此并不是一个固定的值。
+
+> rem是CSS3新增的一个相对单位(root em,根em),使用rem为元素设定字体大小事，仍然是相对大小但相对的只是HTML根元素。
+
+> 区别：IE无法调用那些使用px作为单位的字体大小，而em和rem可以缩放，rem相对的只是HTML根元素。这个单位可谓集相对大小和绝对大小的优点于一身，通过它既可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。目前，除了IE8及更早版本外，所有浏览器已支持rem。
+
+21.手机端有哪些适配方案？
+
+> https://zhuanlan.zhihu.com/p/80692165
+
+22.::before 和 :after中双冒号和单冒号有什么区别？
 
 > 单冒号(:)用于CSS3伪类，双冒号(::)用于CSS3伪元素。
 
