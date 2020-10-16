@@ -213,6 +213,12 @@ box-sizing的使用
 
 17.iframe框架有那些优缺点？
 
+> iframe即内联框架。不同于frame，frame与frameset综合使用，成为帧，框架集。frame已经不大使用了，说白了，frame是僵硬的叠加，iframe是内联的，不是简单的叠加，而是承前启后，对于外围的页面，iframe是一个普通的元素，对于iframe里面的内容，又是一个五脏俱全的页面。iframe的写法是：
+
+`<iframe id="coreIframe" name="coreIframe" src="/blank.html"></iframe>`
+
+> https://www.cnblogs.com/fangjins/archive/2012/08/19/2645631.html
+
 优点：
 > iframe能够原封不动的把嵌入的网页展现出来。
 

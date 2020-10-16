@@ -1,7 +1,7 @@
 #### js:
 1.浏览器输入url之后发生了什么?  
 
-> https://www.jianshu.com/p/c1dfc6caa520 . 
+> https://www.jianshu.com/p/c1dfc6caa520
 
 2.indexDB数据
 
@@ -11,15 +11,15 @@
 
 > https://juejin.im/entry/58c280b1da2f600d8725b887
 
-5.serviceWorker
+5.3
 
 6.svg 
 
-7.js的单元测试 . 
+7.js的单元测试
 
-8.js的算法： 去重.排序等等 . 
+8.3
 
-9.新版css  
+9.3
 
 10.dart语言
 
@@ -37,11 +37,11 @@
 
 17.浏览器怎么渲染页面 
 
-18.ajax。request
+18.ajax.request
 
 19.hybri
 
-20.递
+20.递归
 
 21.箭头函数原理（this指向问题） 
 
@@ -137,4 +137,30 @@
 
 > 505   （HTTP 版本不受支持） 服务器不支持请求中所用的 HTTP 协议版本。
 
+27.promise结合settimeout实例
+`
+new Promise((resolve, reject) => {
+    console.log(1);
+
+setTimeout(
+    function(){
+        console.log(2)
+resolve(0);
+    }, 0)
+
+ 
+})
+.then((a) => {
+    console.log(a);
+    throw new Error();
+        
+    console.log(3);
+})
+.catch(() => {
+    console.log(4);
+})
+.then(() => {
+    console.log(5);
+});
+`
 
