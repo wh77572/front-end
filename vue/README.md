@@ -12,7 +12,7 @@
 
 ## 生命周期及其函数作用
 
-![生命周期图例](./lifecycle.png)
+![生命周期图例](lifecycle.png)
 
 * beforeCreate 初始化实例$options;初始化生命周期;初始化事件;初始化render函数;在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。
 * created 实例已创建;数据监测已激活;实例参数已注入;在这一步，实例已完成以下的配置：数据观测 (data observer)，property 和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，$el property 目前尚不可用。
