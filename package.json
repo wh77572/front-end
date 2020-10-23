@@ -1,0 +1,23 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "整理的一些前端资料 .",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doctoc": "doctoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgilityJin/front-end.git"
+  },
+  "author": "Agility <Agility_Jin@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AgilityJin/front-end/issues"
+  },
+  "homepage": "https://github.com/AgilityJin/front-end#readme",
+  "devDependencies": {
+    "doctoc": "^1.4.0"
+  }
+}
