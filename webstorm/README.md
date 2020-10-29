@@ -1,4 +1,1 @@
-# front-end
-整理的一些前端资料 . 
-
-前端就是基于浏览器的一门技术，可以通过js来跟浏览器沟通交流，浏览器抛出的api与之通信，前端所用的框架也是基于此，首先先得理解浏览的工作原理，然后看下框架的实现方式，首先要手写一个框架，了解其工作原理，然后再通过一些其他的方式来优化，比如webpack等方式。
+https://mp.weixin.qq.com/s?__biz=Mzg4MjA0NDE3OQ==&mid=100000561&idx=1&sn=0b6aadac5adf479b6bdf01230f7aac8f&chksm=4f5dff4d782a765bfe52fbef249b53d36f46b6aff667d9fd0a870022d1e7c70dba50f2186062#rd

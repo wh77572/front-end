@@ -138,7 +138,7 @@
 > 505   （HTTP 版本不受支持） 服务器不支持请求中所用的 HTTP 协议版本。
 
 27.promise结合settimeout实例
-`
+```
 new Promise((resolve, reject) => {
     console.log(1);
 
@@ -162,5 +162,7 @@ resolve(0);
 .then(() => {
     console.log(5);
 });
-`
+```
+
+函数的执行顺序 闭包 块级作用域
 
