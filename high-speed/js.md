@@ -556,6 +556,7 @@ SSL的作用
 
 23.CSR 和 SSR 的区别
 
+服务端渲染(SSR)和客户端(CSR)
 >CSR：Client side render
 
 >SSR：Server side render
@@ -595,6 +596,7 @@ Gzip页面压缩，像服务器发送压缩文件，同时服务器需要设置�
 ```
 
 >https://www.jianshu.com/p/55a445193118
+>https://juejin.im/post/6844904052589854728
 
 24.构造函数
 
@@ -607,50 +609,70 @@ Gzip页面压缩，像服务器发送压缩文件，同时服务器需要设置�
 
 >https://juejin.im/entry/6844903456478593031
 
-react：
+25.this指向问题
+>this永远指向一个对象；
 
-1.mvc  mvp  mvvm区别
+>this的指向完全取决于函数调用的位置；
 
->View传送指令到Controller。
+26.基于防抖和节流的性能优化
 
->Controller完成业务逻辑后改变Model状态。
+防抖
+>防抖就是指触发事件后在 n 秒内函数只能执行一次，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。
 
->Model将新的数据发送至View,用户得到反馈。
+```
+var box = document.getElementById('box');
+box.onmousemove = debounce(mouseMove, 1000);
 
->MVVM将“数据模型数据双向绑定”的思想作为核心，因此在View和Model之间没有联系，通过ViewModel进行交互，而且Model和ViewModel之间的交互是双向的，因此视图的数据的变化会同时修改数据源，而数据源数据的变化也会立即反应到View上。即，ViewModel 是一个 View 信息的存储结构，ViewModel 和 View 上的信息是一一映射关系。
+function mouseMove(event) {
+    console.log(event.clientX)
+}
 
-2.hooks的使用
+function debounce(fn, wait) {
+    let timer = null;
+    return function () {
+        var args = arguments;
+        timer && clearTimeout(timer);
+        timer = setTimeout(() => {
+            fn.apply(this, args);
+        }, wait)
+    }
+}
+```
 
-3.虚拟dom
+节流
+>节流就是指连续触发事件，但是在一段时间中只执行一次函数。
+```
+var box = document.getElementById('box');
+box.onmousemove = throttle(mouseMove, 1000);
 
-4.新的生命周期有哪些改变
+function mouseMove(event) {
+    console.log(event.clientX)
+}
 
-5.跟vue，angular跟新机制的区别
+function throttle(fn, wait) {
+    var last = 0;
+    return function () {
+        var args = arguments;
+        var now = Date.now();
+        if (now - last > wait) {
+            fn.apply(this, args);
+            last = now;
+        }
+    }
+}
+```
 
-6.react父子组件的生命周期
+27.数据响应式原理剖析
 
-7.react render做了什么事情
+>https://juejin.im/post/6884490483624574990
 
-8.redux原理  
+28.基于Web Component的组件化开发
+>https://juejin.im/post/6844904197654052877
+>https://jishuin.proginn.com/p/763bfbd30446
 
-9.中间键  
+29.柯里化
+>把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数，在某些编程语言中（如 Haskell），是通过 Currying 技术支持多参函数这一语言特性的。
+>所以 Currying 原本是一门编译原理层面的技术，用途是实现多参函数。
 
-10. 高阶组件  
+>https://zh.javascript.info/currying-partials
 
-vue:
-
-1.vue3.0新增了什么，做了哪些改变，怎么更新渲染机制
-
-2.mixin的写法
-
-3.v-model的原理，如何快速的准备一个双向数据绑定脚本
-
-4.vuex跟redux区别，以及自身的用法
-
-rxjs
-
-1.冷热回流
-
-webpack：
-
-1.打包的机制，以及根据什么打包
