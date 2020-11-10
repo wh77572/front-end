@@ -184,6 +184,12 @@ quickSort(arr);//结果为[5, 15, 69, 524, 684]
 >https://www.cnblogs.com/djw12333/p/11647413.html
 
 9.promise内部实现方法
+>setTimeout跟Promise比较，Promise所在的那个异步队列优先级要高一些
+
+>Promise 的回调函数属于异步任务，会在同步任务之后执行。
+
+>但是，Promise 的回调函数不是正常的异步任务，而是微任务（microtask）。它们的区别在于，正常任务追加到下一轮事件循环，微任务追加到本轮事件循环。这意味着，微任务的执行时间一定早于正常任务。
+
 >https://mengera88.github.io/2017/05/18/Promise%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90/
 
 10.new  set（）方法的使用
