@@ -77,3 +77,6 @@ this.setState({
     });
 ```
    
+12.数据管理工具Flux、Redux、Vuex的区别
+>https://cloud.tencent.com/developer/article/1454710
+>https://zhuanlan.zhihu.com/p/75696114

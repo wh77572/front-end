@@ -733,3 +733,12 @@ ts是js的超集，这意味着你在ts中写js是完全兼容的，这降低了
 
 严格相等 ===
 值类型相同，值也相同
+
+35.javascript 垃圾回收机制
+>https://juejin.im/post/6844903858972409869
+
+36.强缓存和协商缓存（单独拎出来解释一遍）
+>https://github.com/amandakelake/blog/issues/41
+
+37.http 2.0
+
