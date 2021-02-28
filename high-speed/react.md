@@ -80,3 +80,9 @@ this.setState({
 12.数据管理工具Flux、Redux、Vuex的区别
 >https://cloud.tencent.com/developer/article/1454710
 >https://zhuanlan.zhihu.com/p/75696114
+
+13.react router原理
+
+14.jsx，虚拟dom怎么渲染，什么时候渲染出来
+
+15.setstate  内部实现方式

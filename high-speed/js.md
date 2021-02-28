@@ -753,4 +753,11 @@ ts是js的超集，这意味着你在ts中写js是完全兼容的，这降低了
 >https://github.com/amandakelake/blog/issues/41
 
 37.http 2.0
+> https://juejin.cn/post/6844903734670000142
+
+38.bind具体实现方式
+
+39.promise内部实现方式
+
+40.深拷贝
 
