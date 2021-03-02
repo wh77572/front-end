@@ -16,3 +16,7 @@ webpack：
 1.打包的机制，以及根据什么打包
 
 2.webpack有哪些方式可以优化，具体api
+
+
+基本面试题：
+> https://wkee.net/post/2021-front-end-interview-one-interview-question.html

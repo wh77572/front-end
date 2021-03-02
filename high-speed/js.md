@@ -490,6 +490,8 @@ console.log(cat instanceof Cat); //true
 
 ```
 
+原型和原型链
+> https://juejin.cn/post/6844904096827195399
 
 19.js的设计模式
 
@@ -768,4 +770,10 @@ ts是js的超集，这意味着你在ts中写js是完全兼容的，这降低了
 
 41.判断JS数据类型的四种方法
 > https://www.cnblogs.com/onepixel/p/5126046.html
+
+42.JavaScript深入之从原型到原型链
+> https://github.com/mqyqingfeng/Blog/issues/2
+
+43.前端性能优化
+> https://segmentfault.com/a/1190000022205291
 

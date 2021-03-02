@@ -86,3 +86,6 @@ this.setState({
 14.jsx，虚拟dom怎么渲染，什么时候渲染出来
 
 15.setstate  内部实现方式
+
+16.由浅入深快速掌握React Fiber
+> https://www.jianshu.com/p/37d7de212df1
