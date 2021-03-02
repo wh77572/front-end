@@ -126,6 +126,8 @@ js
 
 >异步就是将一个任务放入到异步队列中，当这个任务执行完成之后，再从异步队列中提取出来，插队到同步队列中，拿到异步任务的结果，可以提升代码执行的效率，不需要因为一个耗费时长的代码而一直等待。
 
+>https://zhuanlan.zhihu.com/p/78113300
+
 8.算法
 排序：
 除了我们常用的sort()方法，其实还有其他很多方法可以实现排序：
@@ -755,9 +757,15 @@ ts是js的超集，这意味着你在ts中写js是完全兼容的，这降低了
 37.http 2.0
 > https://juejin.cn/post/6844903734670000142
 
-38.bind具体实现方式
+38.new,call,apply,bind方法的实现原理
+> https://segmentfault.com/a/1190000021905571
 
 39.promise内部实现方式
+> https://juejin.cn/post/6844903521284784142
 
 40.深拷贝
+> https://juejin.cn/post/6844903929705136141
+
+41.判断JS数据类型的四种方法
+> https://www.cnblogs.com/onepixel/p/5126046.html
 
