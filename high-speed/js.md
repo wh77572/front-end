@@ -777,3 +777,15 @@ ts是js的超集，这意味着你在ts中写js是完全兼容的，这降低了
 43.前端性能优化
 > https://segmentfault.com/a/1190000022205291
 
+44.e.target和e.currentTarget之间的区别
+> target是事件触发的真实元素
+  
+> currentTarget是事件绑定的元素
+  
+> 事件处理函数中的this指向是中为currentTarget
+  
+> currentTarget和target，有时候是同一个元素，有时候不是同一个元素 （因为事件冒泡）
+  
+> 当事件是子元素触发时，currentTarget为绑定事件的元素，target为子元素
+> 当事件是元素自身触发时，currentTarget和target为同一个元素。
+
