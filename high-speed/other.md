@@ -1,24 +1,26 @@
-rxjs
+####rxjs
 
 >https://rxjs-cn.github.io/RxJS-Ultimate-CN/content/why-rxjs.html
 
-webpack：
+####webpack：
 
 >https://juejin.im/post/6844904094281236487
 >https://juejin.im/post/6844904038543130637
 
-rxjs
+####rxjs
 
 1.冷热回流
 
-webpack：
+####webpack：
 
 1.打包的机制，以及根据什么打包
 
 2.webpack有哪些方式可以优化，具体api
 
+####flux redux vuex之间的区别
+> https://cloud.tencent.com/developer/article/1454710
 
-基本面试题：
+####基本面试题：
 > https://wkee.net/post/2021-front-end-interview-one-interview-question.html
 
 > https://wkee.net/post/2021-front-end-interview-one-interview-question.html

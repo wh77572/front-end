@@ -37,6 +37,7 @@ js
 >浏览器输入的url地址经过DNS解析获得对应的IP
 >
 >向服务器发起TCP的3次握手
+>https://hit-alibaba.github.io/interview/basic/network/TCP.html
 >
 >建立连接后，浏览器向该IP地址发送http请求
 >

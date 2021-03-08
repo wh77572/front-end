@@ -1,10 +1,17 @@
 一. JavaScript
 
 1.作用域、词法作用域和动态作用域
+JavaScript 采用词法作用域(lexical scoping)，也就是静态作用域。
+
+因为 JavaScript 采用的是词法作用域，函数的作用域在函数定义的时候就决定了。
+
+而与词法作用域相对的是动态作用域，函数的作用域是在函数调用的时候才决定的。
+https://github.com/mqyqingfeng/blog/issues/3
 
 2.闭包
 
 3.内存管理
+>https://juejin.cn/post/6844903869525262349#heading-2
 
 4.this指向原则/指向的改变机制
 
@@ -13,6 +20,7 @@
 6.执行上下文
 
 7.原型链和原型范式
+>https://juejin.cn/post/6844904096827195399
 
 8.ES6789综合：包括ES 基础知识，Promise，Promise/A+，变量提升与暂时性死区
 
@@ -33,6 +41,7 @@
 2.Vue：Vue 路由方案、核心原理、关键源码分析
 
 3.MVVM开发模式
+> https://alittlelittlestar.github.io/2019/02/23/Vue/MVVM%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3/
 
 四.数据结构与算法
 

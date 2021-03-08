@@ -290,3 +290,5 @@ vue:
 > location.hash 的值实际就是 URL 中#后面的东西。
    
 > history 实际采用了 HTML5 中提供的 API 来实现，主要有 history.pushState()和 history.replaceState()。
+
+>https://zhuanlan.zhihu.com/p/37730038
